@@ -1,18 +1,14 @@
-// src/firebase.js
-// ⚠️ SUBSTITUA os valores abaixo pelas suas credenciais do Firebase
-// Veja o GUIA.md para saber onde encontrar cada valor
-
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "COLE_AQUI_SUA_API_KEY",
-  authDomain: "COLE_AQUI.firebaseapp.com",
-  projectId: "COLE_AQUI_SEU_PROJECT_ID",
-  storageBucket: "COLE_AQUI.appspot.com",
-  messagingSenderId: "COLE_AQUI",
-  appId: "COLE_AQUI_SEU_APP_ID"
+  apiKey: "AIzaSyCdXsLgjODMa4xv42qiTXlpxoN8NyCWm3s",
+  authDomain: "vidacontrol-5e9fb.firebaseapp.com",
+  projectId: "vidacontrol-5e9fb",
+  storageBucket: "vidacontrol-5e9fb.firebasestorage.app",
+  messagingSenderId: "802011236913",
+  appId: "1:802011236913:web:daf33be5d11c0159352310"
 };
 
 const app = initializeApp(firebaseConfig);
