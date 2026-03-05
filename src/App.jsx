@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { auth, db, googleProvider } from "./firebase";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import { signInWithRedirect, signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, onSnapshot } from "firebase/firestore";
 
 // ─── CONSTANTES ───────────────────────────────────────────────
@@ -130,7 +130,9 @@ export default function App() {
 
   // ── LOGIN / LOGOUT ──
   const handleLogin = async () => {
-    try { await signInWithPopup(auth, googleProvider); }
+    try {
+  await signInWithRedirect(auth, googleProvider);
+}
     catch (e) { console.error(e); }
   };
   const handleLogout = async () => {
